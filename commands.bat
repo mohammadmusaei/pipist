@@ -1,0 +1,1 @@
+ng g p pipes/string/replace --project=pipist --module=String --export=true

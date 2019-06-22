@@ -18,6 +18,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "pipist": [
+        "dist/pipist"
+      ],
+      "pipist/*": [
+        "dist/pipist/*"
+      ]
+    }
   }
 }

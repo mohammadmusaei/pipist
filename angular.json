@@ -119,6 +119,41 @@
           }
         }
       }
+    },
+    "pipist": {
+      "projectType": "library",
+      "root": "projects/pipist",
+      "sourceRoot": "projects/pipist/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/pipist/tsconfig.lib.json",
+            "project": "projects/pipist/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pipist/src/test.ts",
+            "tsConfig": "projects/pipist/tsconfig.spec.json",
+            "karmaConfig": "projects/pipist/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/pipist/tsconfig.lib.json",
+              "projects/pipist/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "ngx-pipist"
 }
